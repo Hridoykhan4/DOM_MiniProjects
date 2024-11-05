@@ -1,19 +1,21 @@
-/* 
+/* let count = 1;
 
-let count = 1;     
 document.getElementById('submit-btn').addEventListener('click', function(){
-    const textArea = document.getElementById('text-area');
-    const mainText = textArea.value;
-    
+    const textArea = document.getElementById('text-area').value;
+
+
     const reviewContainer = document.getElementById('review');
     const p = document.createElement('p');
-    p.innerText =  count + '.' + mainText;
-    count++
-    const reviewChange =  reviewContainer.appendChild(p);
-    reviewChange.style.fontWeight = 'bold';
-    reviewChange.style.marginTop = '1rem';
-    
-    textArea.value = ''
+    p.innerText = count + '.' + textArea;
+    count++;
+    const reviewUpdated =  reviewContainer.appendChild(p);
+    // reviewUpdated.style.border = '1px solid black'
+    reviewUpdated.style.fontWeight = 'bold';
+    reviewUpdated.style.marginTop = '1rem';
+
+    document.getElementById('text-area').value = ''
+})
 
 
-}) */
+ */
+

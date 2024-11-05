@@ -1,4 +1,4 @@
-document.getElementById('expense-insert-btn').addEventListener('click', function(){
+/* document.getElementById('expense-insert-btn').addEventListener('click', function(){
     const expenseInput = document.getElementById('expense-field').value;
     const amountFields = getInputNumberById('amount-field');
 
@@ -23,4 +23,4 @@ document.getElementById('expense-insert-btn').addEventListener('click', function
 function getInputNumberById(id){
     const element = document.getElementById(id).value;
     return Number(element);
-}
+} */

@@ -30,5 +30,4 @@ function getBMICategory(bmi) {
     return "<p>You are obese.</p>";
   }
 }
-
  */

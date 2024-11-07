@@ -13,6 +13,14 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -48,7 +56,7 @@
    </div>
  -->
    <!-- Review  Collection Practice -->
-   <h1 class="text-3xl text-center my-5">Goriber Evaly Rebooted 2.0 🎁</h1>
+ <!--   <h1 class="text-3xl text-center my-5">Goriber Evaly Rebooted 2.0 🎁</h1>
    <div class="text-center mx-auto">
     <textarea name="" id="text-area" placeholder="Leave A Review" class="textarea-bordered bg-sky-300 bg-opacity-20 border-2 border-runded textarea-lg w-96 mx-auto"></textarea>
     <div class="text-end mx-auto w-[45%]">
@@ -60,7 +68,7 @@
     <h1 class="text-3xl font-bold text-red-800">User Review ... </h1>
    </div>
 
-
+ -->
 <!-- BMI CALCULATOR -->
 <!-- <section class="mx-auto mt-10 text-center flex flex-col justify-center items-center">
     
@@ -90,8 +98,8 @@
     </div>
 
 </section>
- -->
 
+ -->
 <!-- Navbar Activation -->
    <!--  <section class="flex justify-center items-center h-screen">
         <nav class="w-full">
@@ -157,11 +165,80 @@
       <a href="#" id="myLink" target="_blank" title="Go To Example">Go Here</a>
  -->
 
-    
+ <!-- Quote Generator -->
+<!-- 
+ <div class="container">
+  <div class="header">
+    <h2 class="text-3xl text-center font-bold my-6">
+      JavaScript Quote Generator 🔂
+    </h2>
+  </div>
+  <div class="main content">
+    <div class="card w-96 mx-auto h-46 shadow-2xl">
+      <div class="card-body">
+        <p id="quote-p" class="h-20">
+          Two things are infinite: the universe and human stupidity; and I'm
+          not sure about the universe.
+        </p>
+        <h2 id="name" class="person text-red-500">Unknown</h2>
+        <div class="card-actions justify-end">
+          <button id="quote" class="btn btn-outline btn-primary btn-xs">
+            New Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+<!-- TODO list -->
+<div class="container">
+  <div class="header">
+    <h1 class="text-center mt-5 text-3xl font-bold">To Do List 🖐📚</h1>
+  </div>
+  <div class="main mt-5">
+    <div class="w-96 mx-auto flex">
+      <input
+        id="input-value"
+        type="text"
+        placeholder="Type here"
+        class="input input-bordered input-success w-full max-w-xs me-2"
+      />
+      <button id="task-btn" class="btn btn-outline btn-success">
+        Add Task
+      </button>
+    </div>
+    <div class="overflow-x-auto w-[50%] mx-auto my-4">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="content-container">
+          <!-- <tr>
+            <th>1</th>
+            <td>Cy Ganderton</td>
+            <td>Quality Control Specialist</td>
+          </tr> -->
+        </tbody>
+      </table>
+      <div class="text-end">
+        <button id="clear-btn" class="btn btn-error btn-xs mt-4">
+          Clear All
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
-
+    <script src="todoList.js"></script>
+    <script src="quote.js"></script>
     <script src="play_with_10.js"></script>
     <script src="bmi.js"></script>
     <script src="script.js"></script>

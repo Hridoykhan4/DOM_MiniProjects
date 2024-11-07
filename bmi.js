@@ -1,4 +1,4 @@
-const resultDiv = document.getElementById("result");
+/* const resultDiv = document.getElementById("result");
 
 function calculateBMI() {
   const age = document.getElementById("age").value;
@@ -31,3 +31,4 @@ function getBMICategory(bmi) {
   }
 }
 
+ */

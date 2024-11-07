@@ -1,6 +1,10 @@
 /* const ulTags = document.getElementById("nav-container");
 const listItems = ulTags.getElementsByTagName("li");
+
+
+
 let lastClicked = null;
+
 for (const list of listItems) {
   list.addEventListener("click", function () {
     if (lastClicked === null) {
@@ -15,4 +19,6 @@ for (const list of listItems) {
     }
   });
 }
+
+
  */

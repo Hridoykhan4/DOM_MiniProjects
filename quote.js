@@ -90,3 +90,6 @@ document.getElementById("quote").addEventListener("click", function () {
   h1.innerText = quotes[index].author;
 });
  */
+
+const student = {name: 'Rongila', job: 'Khawadawa'};
+console.log(typeof student)

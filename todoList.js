@@ -1,4 +1,4 @@
-let taskCount = 1;
+/* let taskCount = 1;
 
 document.getElementById("task-btn").addEventListener("click", function () {
   const inputValue = document.getElementById("input-value").value;
@@ -41,3 +41,4 @@ document.getElementById("clear-btn").addEventListener("click", function () {
 
   taskCount = 1;
 });
+ */

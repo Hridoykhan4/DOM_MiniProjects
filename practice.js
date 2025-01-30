@@ -4,7 +4,7 @@ for (const btn of allBtn) {
   btn.addEventListener("click", (e) => {
     count++;
     setInnerValue("cart-count", count);
-
+    e.target.disabled = true
     const placeName = e.target.parentNode.childNodes[1].innerText;
 
     const price = e.target.parentNode.childNodes[3].childNodes[1].innerText;
@@ -25,14 +25,24 @@ for (const btn of allBtn) {
 
     li.append(p, p2);
 
+
+
+
     const budget = document.getElementById("budget");
     const convertedBudget = parseInt(budget.innerHTML);
+
+    if(convertedBudget - parseInt(price) < 0){
+        alert('Low Budget');
+        return
+    }
+
+
     budget.innerText = convertedBudget - parseInt(price);
 
     selectedPlace.appendChild(li);
 
     totalCost("total-cost", parseInt(price));
-    grandTotal(e);
+    // grandTotal(e);
   });
 }
 
@@ -55,13 +65,18 @@ const grandTotal = (event, vehicle) => {
   } else if (vehicle === "train") {
     setInnerValue("grand-total", parseTotal - 200);
   } else if (vehicle === "flight") {
-    setInnerValue("grand-total", parseTotal + 200);
+    setInnerValue("grand-total", parseTotal + 500);
   } else {
     setInnerValue("grand-total", parseTotal);
   }
-
   event.target.disabled = true;
   event.target.style.backgroundColor = "yellow";
+
+  const catBtn = document.getElementsByClassName('category-btn') 
+  for (const btn of catBtn) {
+        btn.disabled = true;
+  }
+
 };
 
 const setInnerValue = (id, value) => {

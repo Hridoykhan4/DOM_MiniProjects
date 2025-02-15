@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    style="
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      gap: 1rem;
+    "
+  >
+    <div class="space-y-4 flex flex-col items-center">
+      <h1
+        class="[text-shadow:_0_4px_8px_rgba(14_165_223_/_0.5)] text-3xl font-bold"
+      >
+        Change The bg by clicking the button
+      </h1>
+      <div class="flex gap-3">
+        <label class="input input-bordered flex items-center gap-2">
+          <input
+            type="text"
+            class="grow"
+            id="output"
+            placeholder="Search"
+            value="#000000"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="h-4 w-4 opacity-70"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </label>
+        <button class="btn" id="copy-btn">Copy</button>
+      </div>
+      <button onclick="handleClick()" class="btn btn-primary">
+        Change Color
+      </button>
+    </div>
+
+    <script>
+      const generateRGBColor = () => {
+        const r = Math.round(Math.random() * 255);
+        const g = Math.round(Math.random() * 255);
+        const b = Math.round(Math.random() * 255);
+
+        return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`;
+      };
+
+      const handleClick = () => {
+        const color = generateRGBColor();
+        // console.log(color);
+        document.body.style.backgroundColor = color;
+        document.getElementById("output").value = color;
+      };
+      document
+        .getElementById("copy-btn")
+        .addEventListener("click", function () {
+          const color = document.getElementById("output").value;
+          navigator.clipboard.writeText(color);
+          generateToastMessage(`Copied: ${color}`);
+        });
+
+      function generateToastMessage(msg) {
+        console.log(msg);
+        const div = document.createElement("div");
+        div.innerText = msg;
+
+        div.classList.add("z-50");
+
+        div.style.position = "fixed";
+        // div.style.bottom = "20px";
+        // div.style.left = "50%";
+        div.style.top = "2rem";
+        div.style.right = "2rem";
+        div.style.transform = "translateX(-50%)";
+        div.style.backgroundColor = msg;
+        div.style.color = "white";
+        div.style.padding = "10px 20px";
+        div.style.borderRadius = "5px";
+        div.style.boxShadow = "0px 2px 10px rgba(0,0,0,0.3)";
+        div.style.cursor = "pointer";
+
+        document.body.appendChild(div);
+
+        setTimeout(() => {
+          // div.remove();
+          div.style.opacity = "1";
+          div.style.transform = "translateX(-50%) translateY(-10px)";
+        }, 10);
+
+        setTimeout(() => {
+          div.style.opacity = "0";
+          div.style.transform = "translateX(-50%) translateY(0px)";
+          setTimeout(() => {
+            div.remove();
+          }, 400);
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>

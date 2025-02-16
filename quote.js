@@ -91,5 +91,3 @@ document.getElementById("quote").addEventListener("click", function () {
 });
  */
 
-const student = {name: 'Rongila', job: 'Khawadawa'};
-console.log(typeof student)

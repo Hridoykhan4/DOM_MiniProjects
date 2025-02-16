@@ -22,3 +22,18 @@ for (const list of listItems) {
 
 
  */
+
+const ulTags = document.getElementById("nav-container");
+const listItems = ulTags.getElementsByTagName("li");
+let lastClicked = null;
+
+for (const list of listItems) {
+  list.addEventListener("click", () => {
+    if (lastClicked) {
+      lastClicked.className = `btn`;
+    }
+
+    list.className = `btn btn-success`;
+    lastClicked = list;
+  });
+}

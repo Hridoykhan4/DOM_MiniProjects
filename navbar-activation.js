@@ -23,7 +23,7 @@ for (const list of listItems) {
 
  */
 
-const ulTags = document.getElementById("nav-container");
+/* const ulTags = document.getElementById("nav-container");
 const listItems = ulTags.getElementsByTagName("li");
 let lastClicked = null;
 
@@ -37,3 +37,4 @@ for (const list of listItems) {
     lastClicked = list;
   });
 }
+ */

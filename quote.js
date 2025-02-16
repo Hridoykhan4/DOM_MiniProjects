@@ -79,15 +79,44 @@
     author: "Dalai Lama",
   },
 ];
+ */
 
-document.getElementById("quote").addEventListener("click", function () {
+/* 
+document.getElementById('quote').addEventListener('click', () => {
   const p = document.getElementById("quote-p");
   const h1 = document.getElementById("name");
 
-  const randomIndex = Math.random() * quotes.length;
-  const index = Math.floor(randomIndex);
+  const index = Math.floor(Math.random() * quotes.length);
   p.innerText = quotes[index].quote;
-  h1.innerText = quotes[index].author;
-});
+  h1.innerText = quotes[index].author
+})
  */
 
+/* let storedAll = null;
+const loadJokes = () => {
+  if (storedAll) {
+    showJokes(storedAll.category, storedAll.joke);
+  }
+
+  fetch("https://v2.jokeapi.dev/joke/Programming?type=single")
+    .then((res) => res.json())
+    .then((data) => {
+      storedAll = data;
+      showJokes(data.category, data.joke);
+    });
+};
+
+document.getElementById("quote").addEventListener("click", () => {
+  loadJokes();
+});
+
+const showJokes = (cat, joke) => {
+  const p = document.getElementById("quote-p");
+  const h1 = document.getElementById("name");
+
+  p.innerText = `${joke}`;
+  h1.innerText = `--${cat}`;
+};
+
+loadJokes();
+ */

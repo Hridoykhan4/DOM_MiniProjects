@@ -1,4 +1,4 @@
-const count = document.getElementById("count");
+/* const count = document.getElementById("count");
 const increaseBtn = document.getElementsByClassName("increase-button")[0];
 const decreaseBtn = document.getElementsByClassName("decrease-button")[0];
 const counter = document.getElementById("counter");
@@ -47,3 +47,4 @@ decreaseBtn.addEventListener("click", (e) => {
   updateCount(-1);
   e.stopPropagation();
 });
+ */

@@ -1,4 +1,4 @@
-const textArea = document.getElementById("text-area");
+/* const textArea = document.getElementById("text-area");
 const reviewContainer = document.getElementById("review");
 let reviewCount = 0;
 
@@ -62,3 +62,4 @@ document.getElementById("text-area").addEventListener("keyup", (e) => {
     }
   }
 });
+ */

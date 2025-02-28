@@ -3,6 +3,21 @@ const listItems = ulTags.getElementsByTagName("li");
 
 
 
+
+Array.from(listItems).forEach((item) => {
+ 
+  item.addEventListener('click', () => {
+    Array.from(listItems).forEach((li => li.classList.remove('btn', 'btn-primary')))
+    item.classList.add('btn', 'btn-primary')
+    item.classList.remove('bg-gray-100')
+  })
+})
+ */
+/* const ulTags = document.getElementById("nav-container");
+const listItems = ulTags.getElementsByTagName("li");
+
+
+
 let lastClicked = null;
 
 for (const list of listItems) {

@@ -64,7 +64,7 @@ const updateGrandTotal = (status) => {
       setInnerTextByValue("grand-total", newGrand);
       document.getElementById("coupon-code").value = "";
     } else {
-      console.log("Not");
+      console.log("Not");/*  */
     }
   } else {
     setInnerTextByValue("grand-total", totalCost);
